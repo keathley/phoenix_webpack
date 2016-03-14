@@ -1,0 +1,2 @@
+defmodule PhoenixWebpack do
+end
