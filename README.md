@@ -1,20 +1,45 @@
-# PhoenixWebpack
+# Phoenix-Webpack
 
-**TODO: Add description**
+ `phoenix_webpack` makes it easy to include a basic webpack configuration with your react application.
+ 
+ ## Installation
+ 
+ Add `phoenix_webpack` to your mix dependencies:
+ 
+ ```elixir
+ defp deps do
+  [{:phoenix_webpack, "~> 0.1", only: [:dev]}]
+end
+```
 
-## Installation
+Now you can generate your webpack config:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```
+mix deps.get
+mix phoenix_webpack.generate
+```
 
-  1. Add phoenix_webpack to your list of dependencies in `mix.exs`:
+Brunch should be removed, Webpack should be installed and your package.json should be updated.
 
-        def deps do
-          [{:phoenix_webpack, "~> 0.0.1"}]
-        end
+You will also need to update your watchers inside of the `config/dev.exs` file:
 
-  2. Ensure phoenix_webpack is started before your application:
+```elixir
+watchers: [node: ["node_modules/webpack/bin/webpack.js", "--watch", "--color"]]
+```
 
-        def application do
-          [applications: [:phoenix_webpack]]
-        end
+Congrats! You now have a working webpack config with phoenix.
+
+## TODO
+
+There is a lot here that I would like to do:
+
+* Automatically update watchers in `config/dev.exs`
+* Richer webpack configuration
+* Basic React setup
+* Support for hot-reloading out of the box
+* Support for other assets like postcss, sass, less, images, fonts, etc.
+
+## Contributing
+
+The goal for `phoenix_webpack` is to have a community driven set of best practices for generating webpack and react applications. PRs, Issues, and comments are very welcome!
 
