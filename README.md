@@ -2,7 +2,7 @@
 
  `phoenix_webpack` makes it easy to include a basic webpack configuration with your react application.
  
- ## Installation
+## Installation
  
  Add `phoenix_webpack` to your mix dependencies:
  
