@@ -33,7 +33,7 @@ defmodule PhoenixWebpack.Mixfile do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      files: ["lib", "mix.exs", "README.md", "LICENSE.md"],
       maintainers: ["Chris Keathley"],
       licenses: ["MIT"],
       links: %{"Github" => "https://github.com/keathley/phoenix_webpack"}
